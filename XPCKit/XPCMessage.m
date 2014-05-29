@@ -327,8 +327,15 @@
 
 - (void)setObject:(id)inObject forKey:(NSString *)inKey
 {
-    xpc_object_t value = [inObject newXPCObject];
+    /* Ensure any NSCFConstantString's are handled safely and force them as a standard NSString.
+       There seems to be no standard to compare to a _constant_ string. The linker generally should handle this but does not. */
+    if([inObject class] == [@"" class])
+    {
+        inObject = [[NSString alloc] initWithFormat:@"%@",inObject];
+    }
     
+    xpc_object_t value = [inObject newXPCObject];
+
     if (value) 
     {
         const char *lowLevelKey = [inKey cStringUsingEncoding:NSUTF8StringEncoding];
@@ -337,7 +344,6 @@
         xpc_release(value);
     } else {
         // There is no way to convert inObject into an xpc_object_t object
-        
         [NSException raise:NSInvalidArgumentException format:@"Object %@ is not convertible into xpc_object_t type. If you make it conform to NSCoding it will be. For further insight have a look at -newXPCObject.", inObject];
     }
 }
