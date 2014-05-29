@@ -52,6 +52,25 @@ static void XPCServiceConnectionHandler(xpc_connection_t handler){
 	xpc_main(XPCServiceConnectionHandler);
 }
 
++(void) runMachService
+{
+    xpc_connection_t connection = xpc_connection_create_mach_service([[[NSBundle mainBundle] bundleIdentifier] cStringUsingEncoding:NSUTF8StringEncoding],dispatch_get_main_queue(),XPC_CONNECTION_MACH_SERVICE_LISTENER);
+    
+    if(!connection)
+    {
+        // Try to safely warn of an issue. This stems from C# development, if there are better methods fork/fix!
+        [NSException raise:@"Unable to create mach service." format:@"connection == NULL"];
+        return;
+    }
+    
+    xpc_connection_set_event_handler(connection, ^(xpc_object_t connection)
+    {
+        XPCServiceConnectionHandler(connection);
+    });
+    
+    xpc_connection_resume(connection);
+}
+
 -(void)handleConnection:(XPCConnection *)connection{
 	if(!_connections){
 		_connections = [[NSMutableArray alloc] init];

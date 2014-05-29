@@ -36,6 +36,10 @@
 
 +(void)runService;
 
+// For applications that are communicating with a privileged helper tool, the standard runService will crash immediately. This allows us to have the benefits of XPCKit but allow the helper to run as root.
+// This also runs on a main dispatch loop so make sure you're using dispatch_main(), this is not done for you as you may need to setup other things and we're trying to minimize the amount of 'intrusion' required.
++(void) runMachService;
+
 @end
 
 // You can supply this as the parameter to xpc_main (but you might as
