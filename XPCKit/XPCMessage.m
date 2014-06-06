@@ -38,6 +38,11 @@
     _XPCDictionary = inXPCDictionary;
 }
 
+- (xpc_object_t) getXPCDictionary
+{
+    return _XPCDictionary;
+}
+
 #pragma mark - Lifecycle
 
 + (id)message

@@ -50,6 +50,7 @@ extern const char *XPCMessageErrorKey;
 - (id)initWithObjectsAndKeys:(id)firstObject, ... NS_REQUIRES_NIL_TERMINATION;
 - (id)initWithSelector:(SEL)inSelector target:(id)inTarget object:(id)inObject;
 
+- (xpc_object_t) getXPCDictionary;
 - (id)objectForKey:(NSString *)inKey;
 
 // Convenience accessors
