@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "XPCKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
+  s.requires_arc = false
   s.summary      = "XPC simplified for Cocoa. Deal with NS* objects instead of xpc_object_t."
   s.homepage     = "https://github.com/reliablehosting/XPCKit"
   s.author       = { "Steve Streza" => "stevestreza@gmail.com" }
