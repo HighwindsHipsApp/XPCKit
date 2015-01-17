@@ -1,7 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XPCKit"
   s.version      = "0.0.2"
-  s.requires_arc = false
   s.summary      = "XPC simplified for Cocoa. Deal with NS* objects instead of xpc_object_t."
   s.homepage     = "https://github.com/reliablehosting/XPCKit"
   s.author       = { "Steve Streza" => "stevestreza@gmail.com" }
@@ -20,6 +19,7 @@ Pod::Spec.new do |s|
   }
   s.platform     = :osx
   s.source_files = 'XPCKit/**/*.{h,m}'
+  s.requires_arc = false
   s.description  = <<-DESC
       XPCKit is a Cocoa library for wrapping the XPC C APIs in a handy object-oriented model.
       It is merely meant as an object-oriented wrapper for the C library, and does not attempt to layer any additional semantics on top.
