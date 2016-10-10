@@ -18,7 +18,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <xpc/xpc.h>
+//#import <xpc/xpc.h>
 
 @interface NSObject (XPCParse)
 
