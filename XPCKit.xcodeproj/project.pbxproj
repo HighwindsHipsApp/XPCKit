@@ -893,6 +893,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				PRODUCT_NAME = XPCKit;
 			};
 			name = Debug;
@@ -902,6 +903,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				PRODUCT_NAME = XPCKit;
 			};
 			name = Release;
