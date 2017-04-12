@@ -895,6 +895,7 @@
 				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
 				GENERATE_MASTER_OBJECT_FILE = YES;
 				PRODUCT_NAME = XPCKit;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -905,6 +906,7 @@
 				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
 				GENERATE_MASTER_OBJECT_FILE = YES;
 				PRODUCT_NAME = XPCKit;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
