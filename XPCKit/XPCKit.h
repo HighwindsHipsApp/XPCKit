@@ -19,7 +19,7 @@
 
 #import <Foundation/Foundation.h>
 
-//#import <xpc/xpc.h>
+#import <xpc/xpc.h>
 #import <XPCKit/XPCExtensions.h>
 #import <XPCKit/XPCTypes.h>
 

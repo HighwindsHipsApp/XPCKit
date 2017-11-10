@@ -310,7 +310,6 @@
 		1EEDD03113DD485400D5AEC3 /* XPCKit */ = {
 			isa = PBXGroup;
 			children = (
-				30E9DAF514ED0B220070A6A4 /* ThirdParty */,
 				1EEDD0A013DE642200D5AEC3 /* Extensions */,
 				1EEDD03213DD485400D5AEC3 /* Supporting Files */,
 				1EEDD03413DD485400D5AEC3 /* XPCKit.h */,
@@ -429,13 +428,6 @@
 				1EB022A4141D9F3700BCC1FB /* NSDate+XPCParse.m */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		30E9DAF514ED0B220070A6A4 /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
